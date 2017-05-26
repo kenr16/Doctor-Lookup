@@ -23,9 +23,11 @@ $(document).ready(function() {
       }
   }
   function showPosition(position) {
-      $('#list_of_doctors').append("Latitude: " + position.coords.latitude +
-      "<br>Longitude: " + position.coords.longitude);
-      
+      $('#list_of_doctors').append("Latitude: " + position.coords.latitude.toFixed(3) +
+      "<br>Longitude: " + position.coords.longitude.toFixed(3));
+      lat = position.coords.latitude.toFixed(3);
+      long = position.coords.longitude.toFixed(3);
+
   }
 
   getLocation();
@@ -43,7 +45,7 @@ var listOfDoctors = new Exports();
     $('#symptom').val("");
     var location = "";
     $('#list_of_doctors').text("");
-    listOfDoctors.getDoctors(symptom, location, displayDoctors);
+    listOfDoctors.getDoctors(symptom, displayDoctors, lat, long);
   });
 
   $('#search_by_name').submit(function(e) {
@@ -52,6 +54,6 @@ var listOfDoctors = new Exports();
     $('#name_input').val("");
     var location = "";
     $('#list_of_doctors').text("");
-    listOfDoctors.getDoctorsByName(doc_name, location, displayDoctors);
+    listOfDoctors.getDoctorsByName(doc_name, displayDoctors, lat, long);
   });
 });
