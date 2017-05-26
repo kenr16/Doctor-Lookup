@@ -1,0 +1,26 @@
+body {
+  display:inline;
+  font-family: 'Patua One', cursive;
+}
+
+.doctordiv {
+  padding: 10px;
+  padding-left: 20px;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #62cefc;
+  border-radius: 30px;
+  width: 250px;
+}
+
+.doctordiv img {
+  border-radius: 10px;
+}
+
+.doctordiv:hover {
+  background-color: #b3ecff;
+}
+
+.header {
+  text-align: center;
+}

@@ -8,8 +8,12 @@ var displayDoctors = function(result) {
     var last = JSON.stringify(doctor.profile.last_name);
     var name = first.concat(" ").concat(last).split('"').join("");
     var bio = JSON.stringify(doctor.profile.bio);
-    $('#list_of_doctors').append("<li>" + name + "</li><br>");
-    $('#list_of_doctors').append("<li>" + bio + "</li><hr>");
+    var image = JSON.stringify(doctor.profile.image_url);
+    var title = JSON.stringify(doctor.profile.title).split('"').join("");
+    var distance = JSON.stringify(doctor.practices[0].distance.toFixed(1)).split('"').join("");
+    var practice = JSON.stringify(doctor.practices[0].name);
+    $('#list_of_doctors').append("<li class='doctordiv'>" + name + ", " + title + ".<br>" + practice + "<br>Distance: " + distance + " miles" + "<img src=" + image + "/><br>");
+    $('#list_of_doctors').append(bio + "</li><hr>");
   });
 };
 
