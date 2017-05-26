@@ -14,7 +14,7 @@ body {
 }
 
 .doctordiv img {
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .doctordiv:hover {
@@ -23,4 +23,41 @@ body {
 
 .header {
   text-align: center;
+  width: 100%;
+  background-color: #ccf5ff;
+  padding: 20px;
+}
+
+.header h1 {
+  font-family: 'Baloo Bhai', cursive;
+  color: #0086b3;
+}
+
+.header img {
+  height: 150px;
+}
+
+.bar {
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: #62cefc;
+  border-radius: 30px;
+}
+
+.side {
+  width:25%;
+  height: 100%;
+  background-color: red;
+}
+
+.center {
+  width:50%;
+  background-color: #62cefc;
+  padding: 50px;
+}
+
+.innercenter {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
 }

@@ -7,11 +7,13 @@
     <script src="build/js/vendor.min.js"></script>
     <script src="build/js/app.js"></script>
     <title>Doctor Lookup</title>
-    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patua+One" rel="stylesheet">
   </head>
   <body>
     <div class="header">
+      <img src="img/logo.png">
       <h1>Doctor Lookup Form</h1>
+      <hr class="bar">
       <form id="search_by_symptom">
         <label for="symptom">Enter a symptom:</label>
         <input id="symptom" type="text">
@@ -24,8 +26,18 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-    <div>
-      <ul id="list_of_doctors"></ul>
+
+    <div class="row">
+      <div class="col-sm-2 side">
+      </div>
+      <div class="col-sm-9 center">
+        <div class="innercenter">
+          <ul id="list_of_doctors"></ul>
+        </div>
+      </div>
+      <div class="col-sm-2 side">
+      </div>
     </div>
+
   </body>
 </html>
