@@ -14,6 +14,28 @@ var displayDoctors = function(result) {
 };
 
 $(document).ready(function() {
+
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+          $('#list_of_doctors').append("Geolocation is not supported by this browser.");
+      }
+  }
+  function showPosition(position) {
+      $('#list_of_doctors').append("Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude);
+      
+  }
+
+  getLocation();
+
+  //Function to make an API call to pull the user's IP address.  Currently unused.
+  $.getJSON('http://freegeoip.net/json/?callback=')
+    .then(function(data) {
+    console.log(JSON.stringify(data.ip));
+  });
+
 var listOfDoctors = new Exports();
   $('#search_by_symptom').submit(function(e) {
     e.preventDefault();
