@@ -13,11 +13,27 @@ var displayDoctors = function(result) {
     var distance = JSON.stringify(doctor.practices[0].distance.toFixed(1)).split('"').join("");
     var practice = JSON.stringify(doctor.practices[0].name);
     $('#list_of_doctors').append("<li class='doctordiv'>" + name + ", " + title + ".<br>" + practice + "<br>Distance: " + distance + " miles" + "<img src=" + image + "/><br>");
-    $('#list_of_doctors').append(bio + "</li><hr>");
+    $('#list_of_doctors').append(bio + "</li><hr class='bar'>");
   });
 };
 
+
+function initMap() {
+  var uluru = {lat: -25.363, lng: 131.044};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+
+
 $(document).ready(function() {
+
+  initMap();
 
   function getLocation() {
       if (navigator.geolocation) {

@@ -7,7 +7,7 @@ body {
   padding: 10px;
   padding-left: 20px;
   border-style: solid;
-  border-width: 2px 2px 2px 2px;
+  border-width: 3px 3px 3px 3px;
   border-color: #62cefc;
   border-radius: 30px;
   width: 250px;
@@ -15,16 +15,20 @@ body {
 
 .doctordiv img {
   border-radius: 8px;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: #62cefc;
 }
 
 .doctordiv:hover {
   background-color: #b3ecff;
+  border-color: #0086b3;
 }
 
 .header {
   text-align: center;
   width: 100%;
-  background-color: #ccf5ff;
+  background-color: #99e6ff;
   padding: 20px;
 }
 
@@ -40,24 +44,33 @@ body {
 .bar {
   border-style: solid;
   border-width: 2px 2px 2px 2px;
-  border-color: #62cefc;
+  border-color: #0086b3;
   border-radius: 30px;
 }
 
 .side {
   width:25%;
-  height: 100%;
-  background-color: red;
+  height: 1500px;
+  background-color: #0086b3;
 }
 
 .center {
   width:50%;
-  background-color: #62cefc;
+  background-color: white;
   padding: 50px;
 }
 
 .innercenter {
-  background-color: white;
+  background-color: #99e6ff;
   border-radius: 20px;
   padding: 20px;
+}
+
+.col-container {
+  display: table; /* Make the container element behave like a table */
+  width: 100%; /* Set full-width to expand the whole page */
+}
+
+.col {
+  display: table-cell; /* Make elements inside the container behave like table cells */
 }
